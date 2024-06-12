@@ -9,7 +9,10 @@ class CommonLoader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Lottie.asset('${CommonPath.animationPath}loader.json',
-        width: size.width * numD35);
+    return Lottie.asset(
+      '${CommonPath.animationPath}loader2.json',
+      fit: BoxFit.cover,
+      height: size.width * numD15,
+    );
   }
 }

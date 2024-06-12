@@ -1,7 +1,3 @@
-import 'dart:io';
-
-import 'package:ai_assistant/utils/common_path.dart';
-import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
@@ -9,22 +5,19 @@ import 'dart:developer' as devtools show log;
 
 class HomeCubit extends Cubit<HomeState> {
   final gemini = Gemini.instance;
-  ChatUser user = ChatUser(
-    id: '0',
-    firstName: 'user',
-    profileImage: '${CommonPath.imagePath}person.png',
-  );
-  ChatUser model = ChatUser(
-    id: '1',
-    firstName: 'model',
-    profileImage: '${CommonPath.imagePath}app_logo.png',
-  );
   final TextEditingController textController = TextEditingController();
 
   HomeCubit()
       : super(
           HomeState(
-            messagesList: [],
+            messagesList: [
+              ChatModel(
+                isMe: false,
+                userName: 'ai',
+                text: 'Hello there! How can i assist you today?',
+                dateTime: DateTime.now(),
+              ),
+            ],
             contentList: [],
             isLoading: false,
           ),

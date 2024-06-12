@@ -30,9 +30,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
       theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.blueGrey.shade600,
+      ),
+      themeMode: ThemeMode.dark,
       home: const SplashScreen(),
     );
   }

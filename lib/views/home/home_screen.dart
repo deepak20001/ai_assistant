@@ -1,7 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:ai_assistant/utils/common_path.dart';
 import 'package:ai_assistant/utils/common_widgets.dart/common_textformfield.dart';
-import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,64 +34,86 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
+            backgroundColor: Colors.blueGrey.shade900,
             title: CommonText(
-              title: 'Chat with Ai',
+              title: 'Chat with Gemini',
               fontSize: size.width * numD055,
               fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
           ),
           body: BlocBuilder<HomeCubit, HomeState>(
             builder: (context, state) {
               var cubitData = context.read<HomeCubit>();
 
-              return Column(
+              return Stack(
+                alignment: Alignment.center,
                 children: [
-                  Expanded(
-                    child: chatListWidget(size, cubitData),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: size.width * numD035,
-                      vertical: size.width * numD03,
-                    ),
-                    child: CommonTextFormField(
-                      size: size,
-                      controller: cubitData.textController,
-                      hintText: 'Ask your question here...',
-                      maxLines: 1,
-                      suffixIcon: SizedBox(
-                        width: size.width * numD25,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            const Icon(
-                              Icons.camera_alt,
-                              color: Colors.grey,
-                            ),
-                            const Icon(
-                              Icons.attach_file,
-                              color: Colors.grey,
-                            ),
-                            IconButton(
-                              onPressed: () {
-                                if (cubitData.textController.text.isNotEmpty) {
-                                  cubitData.sendMessage(
-                                    ChatModel(
-                                      isMe: true,
-                                      userName: 'user',
-                                      text: cubitData.textController.text,
-                                      dateTime: DateTime.now(),
-                                    ),
-                                  );
-                                  cubitData.textController.clear();
-                                }
-                              },
-                              icon: const Icon(Icons.send),
-                            ),
-                          ],
-                        ),
+                  Opacity(
+                    opacity: .5,
+                    child: Padding(
+                      padding:
+                          EdgeInsets.symmetric(vertical: size.width * numD30),
+                      child: Lottie.asset(
+                        '${CommonPath.animationPath}loader2.json',
+                        fit: BoxFit.cover,
                       ),
                     ),
+                  ),
+                  Column(
+                    children: [
+                      Expanded(
+                        child: chatListWidget(size, cubitData),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: size.width * numD035,
+                          vertical: size.width * numD03,
+                        ),
+                        child: CommonTextFormField(
+                          size: size,
+                          controller: cubitData.textController,
+                          hintText: 'Ask your question here...',
+                          maxLines: 1,
+                          suffixIcon: SizedBox(
+                            width: size.width * numD25,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                const Icon(
+                                  Icons.camera_alt,
+                                  color: Colors.grey,
+                                ),
+                                const Icon(
+                                  Icons.attach_file,
+                                  color: Colors.grey,
+                                ),
+                                IconButton(
+                                  onPressed: () {
+                                    if (cubitData
+                                        .textController.text.isNotEmpty) {
+                                      cubitData.sendMessage(
+                                        ChatModel(
+                                          isMe: true,
+                                          userName: 'user',
+                                          text: cubitData.textController.text,
+                                          dateTime: DateTime.now(),
+                                        ),
+                                      );
+                                      cubitData.textController.clear();
+                                    }
+                                  },
+                                  icon: const Icon(
+                                    Icons.send,
+                                    color: Colors.blueGrey,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               );
@@ -136,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             if (state.isLoading!)
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: size.width * numD03),
+                padding: EdgeInsets.symmetric(horizontal: size.width * numD035),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -149,6 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       title: 'Loading...',
                       fontSize: size.width * numD03,
                       fontWeight: FontWeight.w600,
+                      color: Colors.white,
                     ),
                   ],
                 ),
@@ -241,11 +263,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   top: 5,
                   bottom: 20,
                 ),
-                child: Text(
-                  message,
-                  style: const TextStyle(
-                    fontSize: 16,
-                  ),
+                child: CommonText(
+                  title: message,
+                  fontSize: size.width * numD038,
+                  color: Colors.black,
                 ),
               ),
               Positioned(
