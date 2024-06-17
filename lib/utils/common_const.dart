@@ -1,5 +1,4 @@
 const appName = 'Ai Assistant';
-const String geminiApiKey = 'AIzaSyCSfnamN_3ijz1GuRGbCZS7xquyBoirYPE';
 
 
 //common Numbers

@@ -22,10 +22,6 @@ dependencies:
   # for showing lottie animations
   lottie: ^3.1.2
 
-  # for local database
-  hive: 4.0.0-dev.2
-  isar_flutter_libs: ^4.0.0-dev.13
-
   # for accessing storage path
   path_provider: ^2.1.3
 
@@ -37,6 +33,26 @@ dependencies:
   
   # for date-time convertor
   intl: ^0.19.0
+
+  # for converting text to speech
+  flutter_tts: ^4.0.2
+  
+  # for converting speech to text
+  speech_to_text: ^6.6.2
+
+  # for handling permissions
+  permission_handler: ^11.3.1
+  
+  # for getting device info
+  device_info_plus: ^10.1.0
+  
+  # for showing no widget
+  nil: ^1.1.1
+  
+  # for adding glow effect on widget
+  avatar_glow: ^3.0.1
+
+  flutter_dotenv: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -60,6 +76,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/animations/
+    - .env
 
   # fonts:
   #   - family: Schyler
