@@ -50,7 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 builder: (context, state) {
                   return IconButton(
                     onPressed: () {
-                      context.read<HomeCubit>().updateAudioEnableValFunc(!state.isAudioEnabled!);
+                      context
+                          .read<HomeCubit>()
+                          .updateAudioEnableValFunc(!state.isAudioEnabled!);
                     },
                     icon: Image.asset(
                       state.isAudioEnabled!
@@ -324,8 +326,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               child: GestureDetector(
                 onLongPress: () {
-                  _showMoreOptionsBottomSheet(
-                      context, size, cubitData, message);
+                  cubitData.speakText(message);
                 },
                 child: Card(
                   elevation: 1,
@@ -368,69 +369,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-    );
-  }
-
-  /// show more options bottom sheet
-  void _showMoreOptionsBottomSheet(
-      BuildContext context, Size size, HomeCubit cubitData, String message) {
-    showModalBottomSheet(
-      isDismissible: true,
-      isScrollControlled: true,
-      context: context,
-      builder: (BuildContext context) {
-        return SafeArea(
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(size.width * numD07),
-                topRight: Radius.circular(size.width * numD07),
-              ), // Optional: for rounded border
-            ),
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: size.width * numD035,
-                right: size.width * numD035,
-                bottom: MediaQuery.of(context).viewInsets.bottom,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  SizedBox(height: size.height * numD04),
-                  CommonText(
-                    title: 'Copy url',
-                    fontSize: size.width * numD04,
-                  ),
-                  SizedBox(height: size.height * numD015),
-                  CommonText(
-                    title: 'Share message',
-                    fontSize: size.width * numD04,
-                  ),
-                  SizedBox(height: size.height * numD015),
-                  InkWell(
-                    onTap: () {
-                      cubitData.updateAudioEnableValFunc(true);
-                      cubitData.speakText(message);
-                      Navigator.pop(context);
-                    },
-                    child: SizedBox(
-                      width: double.infinity,
-                      child: CommonText(
-                        title: 'Hear audio',
-                        fontSize: size.width * numD04,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: size.height * numD03),
-                ],
-              ),
-            ),
-          ),
-        );
-      },
     );
   }
 }
