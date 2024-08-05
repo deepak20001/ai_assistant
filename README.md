@@ -19,38 +19,16 @@ Welcome to the AI Assistant App, a Flutter-based AI chatbot leveraging the power
 
 <p float="left">
   <div style="margin-bottom: 20px;"> 
-    <img src="https://github.com/user-attachments/assets/08de1d23-09a9-4588-8df3-3af543f32216" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/42dcd319-52bd-4e40-b1bc-100f13ade103" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/544d0de8-133c-4ea8-a2b0-8745005827e0" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/29a17416-b26c-4990-8632-b1bbd3cf91ac" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/f3486b63-8822-4c34-b1cd-464e85fb2172" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/280aebea-8ac5-41e9-860c-e34d50f0a3d4" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/478c3b64-7a8d-4b8c-864a-d8bef13820ca" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/e1db3d46-838c-449f-a60f-ecc47b2d8f85" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/8c0b35c8-c036-4a6f-81e1-3b5930f89948" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/190d223f-f1ba-48b0-b251-dea83a86de86" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/54ebedba-91c2-4967-a58e-c9ea0db2dd93" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/1a560740-1883-46b2-9a59-d8d3600f296e" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/24f27f79-4b76-4c4b-bcf6-babc9e54d247" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/e1e74fa3-a7ee-4583-9f00-987332f92513" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/9b34077a-6336-4289-b308-efcd5a99d49a" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://github.com/user-attachments/assets/a852e5ec-4b5c-486f-96cd-9f62430bc8f8" width="200">
-    &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="https://github.com/deepak20001/ai_assistant/assets/88405430/86f08abe-e6e7-4b0e-9146-2ed1d0bd45f1"  width="200">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="https://github.com/deepak20001/ai_assistant/assets/88405430/8b6b5577-883b-4ebd-9860-a747ba55e3e3"  width="200">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="https://github.com/deepak20001/ai_assistant/assets/88405430/bb7a98ab-7a35-4088-aa52-5054261774b6"  width="200">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="https://github.com/deepak20001/ai_assistant/assets/88405430/4666cdc2-172d-46e1-b8e9-77899135ba45"  width="200">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="https://github.com/deepak20001/ai_assistant/assets/88405430/70c2e4cb-c834-42e5-8d6a-1e534c171f08"  width="200">
+      &nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 </p>
 
